@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Sign up</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,7 +11,7 @@
         h1 {
             color: #333;
         }
-        .login-form {
+        .registration-form {
             max-width: 300px;
             margin: 0 auto;
         }
@@ -32,9 +32,9 @@
     </style>
 </head>
 <body>
-    <h1>Lofin</h1>
-    <div class="login-form">
-        <form action="login.php" method="POST">
+    <h1>Sign up</h1>
+    <div class="registration-form">
+        <form action="register.php" method="POST">
             <div class="form-group">
                 <label for="username">User name:</label>
                 <input type="text" id="username" name="username" required>
@@ -44,7 +44,15 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
-                <input type="submit" value="Login">
+                <label for="confirm_password">Confirm password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Sign up">
             </div>
         </form>
     </div>
