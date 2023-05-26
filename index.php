@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Trang chủ</title>
+    <title>Home</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,6 +14,7 @@
         p {
             color: #666;
         }
+
     </style>
 </head>
 <body>
@@ -22,6 +23,23 @@
             <a href="index.php">
                 <img src="path/to/logo.png" alt="Logo">
             </a>
+        </div>
+        <div>
+            <input type="text" placeholder="search ..." name="search_bar">
+            <input type="submit" value="Search" name="search_bar_submit">
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="#">Products</a></li>
+                    <ul>
+                        <li><a href="#">Products 1</a></li>
+                        <li><a href="#">Products 2</a></li>
+                        <li><a href="#">Products 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Contact sales</a></li>
+            </ul>
         </div>
         <div>
             <a href="./templates/login/index.php">Login</a>
