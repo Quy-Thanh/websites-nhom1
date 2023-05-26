@@ -28,26 +28,24 @@
             <input type="text" placeholder="search ..." name="search_bar">
             <input type="submit" value="Search" name="search_bar_submit">
         </div>
-        <div class="navigation">
-            <ul>
-                <li><a href="#">Products</a></li>
-                    <ul>
-                        <li><a href="#">Products 1</a></li>
-                        <li><a href="#">Products 2</a></li>
-                        <li><a href="#">Products 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Cart</a></li>
-                <li><a href="#">Contact sales</a></li>
-            </ul>
-        </div>
         <div>
+            <a href="#">Customer care</a>
+            <a href="#">Contact sales</a>
+            <a href="#">Cart</a>
             <a href="./templates/login/index.php">Login</a>
             <a href="./templates/signup/index.php">Sign up</a>
         </div>
     </header>
-    <h1>Xin chào, thế giới!</h1>
-    <p>Chào mừng đến với trang web của chúng tôi. Đây là trang chủ.</p>
-    <p>Hãy khám phá và tìm hiểu thêm về chúng tôi.</p>
+    <div>
+        <div>
+            <?php include './includes/categories/index.php'; ?>
+            <img src="https://laptop88.vn/media/banner/08_Mar1d47a608c5346ac1803f841e33159012.jpg">
+        </div>
+        <div>
+            <h1>Xin chào, thế giới!</h1>
+            <p>Chào mừng đến với trang web của chúng tôi. Đây là trang chủ.</p>
+            <p>Hãy khám phá và tìm hiểu thêm về chúng tôi.</p>
+        </div>
+    </div>
 </body>
 </html>
