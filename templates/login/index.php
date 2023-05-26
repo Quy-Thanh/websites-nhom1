@@ -34,10 +34,10 @@
 <body>
     <h1>Lofin</h1>
     <div class="login-form">
-        <form action="login.php" method="POST">
+        <form method="post" action="../../controllers/login_process.php">
             <div class="form-group">
-                <label for="username">User name:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="user_name">User name:</label>
+                <input type="text" id="user_name" name="user_name" required>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
@@ -47,6 +47,12 @@
                 <input type="submit" value="Login">
             </div>
         </form>
+	<?php
+    // Hiển thị thông báo lỗi (nếu có)
+    if (isset($error)) {
+        echo '<p style="color: red;">' . $error . '</p>';
+    }
+    ?>
     </div>
 </body>
 </html>

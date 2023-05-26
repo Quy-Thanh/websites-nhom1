@@ -33,7 +33,7 @@
             <a href="#">Contact sales</a>
             <a href="#">Cart</a>
             <a href="./templates/login/index.php">Login</a>
-            <a href="./templates/signup/index.php">Sign up</a>
+            <a href="./templates/sign_up/index.php">Sign up</a>
         </div>
     </header>
     <div>

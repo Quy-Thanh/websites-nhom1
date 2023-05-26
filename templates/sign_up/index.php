@@ -11,7 +11,7 @@
         h1 {
             color: #333;
         }
-        .registration-form {
+        .sign_up-form {
             max-width: 300px;
             margin: 0 auto;
         }
@@ -33,11 +33,11 @@
 </head>
 <body>
     <h1>Sign up</h1>
-    <div class="registration-form">
-        <form action="register.php" method="POST">
+    <div class="sign_up-form">
+        <form action="../../controllers/sign_up_process.php" method="POST">
             <div class="form-group">
-                <label for="username">User name:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="user_name">User name:</label>
+                <input type="text" id="user_name" name="user_name" required>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
