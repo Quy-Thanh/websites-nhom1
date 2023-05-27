@@ -1,0 +1,11 @@
+{
+    "name": "name/lib",
+    "require": {
+        "fzaninotto/faker": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Name\\Lib\\": "src/"
+        }
+    }
+}
