@@ -6,14 +6,19 @@
     <!-- Định dạng CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
+<style type="text/css">
+
+</style>
 <body>
     <header>
-        <?php include '../includes/navbar/index.php'; ?>
+        <nav>
+            <?php include '../includes/navbar/index.php'; ?>
+        </nav>
     </header>
     <!-- Định dạng giao diện của trang Dashboard -->
-    <h1>Welcome, <?php echo $user_name; ?>!</h1>
-    <p>This is your user dashboard.</p>
-
+    <?php include '../includes/filter/index.php'; ?>
+    <?php   include '../includes/items/index.php'; ?>
     <!-- Các phần tử giao diện và chức năng khác của trang Dashboard -->
+
 </body>
 </html>
