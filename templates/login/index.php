@@ -32,6 +32,11 @@
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <?php include '../../includes/navbar/index.php'; ?>
+        </nav>
+    </header>
     <h1>Login</h1>
     <div class="login-form">
         <form method="post" action="../../controllers/login_process.php">
