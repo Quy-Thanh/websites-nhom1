@@ -19,22 +19,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="index.php">
-                <img src="path/to/logo.png" alt="Logo">
-            </a>
-        </div>
-        <div>
-            <input type="text" placeholder="search ..." name="search_bar">
-            <input type="submit" value="Search" name="search_bar_submit">
-        </div>
-        <div>
-            <a href="#">Customer care</a>
-            <a href="#">Contact sales</a>
-            <a href="#">Cart</a>
-            <a href="./templates/login/index.php">Login</a>
-            <a href="./templates/sign_up/index.php">Sign up</a>
-        </div>
+        <?php include './includes/navbar/index.php'; ?>
     </header>
     <div>
         <div>
