@@ -1,29 +1,73 @@
-<nav>
-    <ul>
-        <li><a href="index.php"><img src="path/to/logo.png" alt="Logo"></a></li>
-        <li>
-            <input type="text" placeholder="search ..." name="search_bar">
-            <input type="submit" value="Search" name="search_bar_submit">
-        </li>
-        <li><a href="#">Customer care</a></li>
-        <li><a href="#">Contact sales</a></li>
-        <li><a href="#">Cart</a></li>
-    </ul>
-    <div>
-        <?php
-        // Đường dẫn tuyệt đối đến thư mục gốc của trang web
-        $base_url = 'http://localhost/websites-nhom1/';
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
 
-        // Kiểm tra phiên đăng nhập
-        session_start();
+li {
+  display: inline-block;
+  margin-right: 10px;
+}
 
-        // Kiểm tra xem người dùng đã đăng nhập hay chưa
+li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+li a:hover {
+  background-color: #ddd;
+}
+
+li input[type="text"],
+li input[type="submit"] {
+  padding: 6px 10px;
+}
+
+li input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+</style>
+<?php
+session_start();
+// Đường dẫn tuyệt đối đến thư mục gốc của trang web
+$base_url = 'http://localhost/websites-nhom1/';
+// Kiểm tra phiên đăng nhập
+echo '<ul>';
         if (!isset($_SESSION["user_name"])) {
-            echo '<a href="' . $base_url . 'templates/login/index.php">Login</a>';
-            echo '<a href="' . $base_url . 'templates/sign_up/index.php">Sign up</a>';
+            echo '<li><a href="' . $base_url . 'index.php"><img src="path/to/logo.png" alt="Logo"></a></li>';
+            echo '<li><a href="' . $base_url . 'index.php">Store</a></li>';
+            echo '<li><a href="' . $base_url . 'index.php">Laptop</a></li>';
+            echo '<li><a href="' . $base_url . 'index.php">Items</a></li>';
+            echo '<li><a href="' . $base_url . 'index.php"><img src="path/to/logo.png" alt="Search"></a></li>';
+            echo '<li><a href="#">Order</a></li>';
+            echo '<li><a href="index.php"">Support</a></li>';
+            echo '<li><a href="index.php"">Contact sales</a></li>';
+            echo '<li><a href="' . $base_url . 'templates/login/index.php">Login</a></li>';
+            echo '<li><a href="' . $base_url . 'templates/sign_up/index.php">Sign up</a></li>';
         } else {
-            echo '<a href="' . $base_url . 'user/log_out.php">Log out</a>';
+            echo '<li><a href="' . $base_url . 'user/dashboard.php"><img src="path/to/logo.png" alt="Logo"></a></li>';
+            echo '<li><a href="' . $base_url . 'user/dashboard.php">Store</a></li>';
+            echo '<li><a href="' . $base_url . 'user/dashboard.php">Laptop</a></li>';
+            echo '<li><a href="' . $base_url . 'user/dashboard.php">Items</a></li>';
+            echo '<li><a href="' . $base_url . 'user/dashboard.php"><img src="path/to/logo.png" alt="Search"></a></li>';
+            echo '<li><a href="' . $base_url . 'templates/order/index.php">Order</a></li>';
+            echo '<li><a href="' . $base_url . 'templates/support/index.php">Support</a></li>';
+            echo '<li><a href="' . $base_url . 'templates/favourite/index.php">Favourite</a></li>';
+            echo '<li><a href="' . $base_url . 'templates/card/index.php">Cart</a></li>';
+            echo '<li>';
+            include 'account.php';
+            echo '</li>';
         }
-        ?>
-    </div>
-</nav>
+echo '</ul>';
+?>
