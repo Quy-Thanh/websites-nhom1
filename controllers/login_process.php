@@ -20,10 +20,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->rowCount() > 0) {
             // Login successful
             // Redirect the user to the home page
-            header("Location: ../index.php");
+            session_start();
+            $_SESSION["user_name"] = $user_name;
+            header("Location: ../user/dashboard.php");
             exit();
         } else {
             // Login failed
+            header("Location: ../templates/login/index.php");
             $error = "Thông tin đăng nhập không hợp lệ!";
         }
     } catch (PDOException $e) {

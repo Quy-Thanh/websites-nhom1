@@ -32,7 +32,7 @@
     </style>
 </head>
 <body>
-    <h1>Lofin</h1>
+    <h1>Login</h1>
     <div class="login-form">
         <form method="post" action="../../controllers/login_process.php">
             <div class="form-group">
