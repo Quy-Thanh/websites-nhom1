@@ -1,0 +1,202 @@
+.nav-bar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+.container{
+  display: inline-flex;
+  background-color: #ffffff;
+  padding: 10px;
+}
+.product-container {
+  width: 100%;
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.product-container {
+  position: relative;
+}
+.product-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  padding: 10px;
+  position: relative;
+}
+
+.product-item {
+  width: 200px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.product-item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.product-item h2 {
+  font-size: 16px;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.product-item p {
+  font-size: 14px;
+  margin: 5px 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.product-item .price {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.product-item .description {
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.product-item a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  background-color: #ffffff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.product-item a:hover {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.product-list::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.product-item:hover {
+  box-shadow: 0 0 5px 0 #ccc;
+}
+
+.product-item:hover img {
+  transform: scale(1.1);
+}
+
+.product-item:hover h2 {
+  color: #333;
+}
+
+.product-item:hover p {
+  color: #333;
+}
+
+.product-item:hover .price {
+  color: #333;
+}
+
+.product-item:hover .description {
+  color: #333;
+}
+
+.product-item:hover a {
+  background-color: #000;
+  color: #fff;
+}
+
+.product-item:hover .prev-btn,
+.product-item:hover .next-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+.product-item:hover .prev-btn:hover,
+.product-item:hover .next-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.product-list .filter-container {
+  margin-bottom: 20px;
+}
+
+.product-list .filter-group {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.filter-container {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  max-width: 2vm;
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+
+.filter-group {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.filter-group label {
+  margin-right: 5px;
+}
+
+.filter-group select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#filter-btn {
+  padding: 6px 12px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#filter-btn:hover {
+  background-color: #555;
+}

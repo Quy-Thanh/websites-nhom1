@@ -32,11 +32,6 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <?php include '../../includes/navbar/index.php'; ?>
-        </nav>
-    </header>
     <h1>Sign up</h1>
     <div class="sign_up-form">
         <form action="../../controllers/sign_up_process.php" method="POST">

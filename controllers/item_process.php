@@ -1,41 +1,3 @@
-<style>
-.product-item {
-  display: inline-block;
-  width: 200px;
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  background-color: #f8f8f8;
-}
-
-.product-item img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 10px;
-}
-
-.product-item h2 {
-  font-size: 16px;
-  margin: 0;
-}
-
-.product-item p {
-  font-size: 14px;
-  margin: 5px 0;
-}
-
-.product-item .price {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.product-item .description {
-  margin-top: 10px;
-}
-</style>
-
-
 <?php
 include_once "../config/config.php";
 try {
@@ -61,7 +23,7 @@ try {
 if ($result->rowCount() > 0) {
     foreach ($result as $row) {
         echo "<div class='product-item'>";
-        echo "<a href='../templates/product_detail/index.php?id=". $row["id"]."'>";
+        echo "<a href='../controllers/item_detail_process.php?id=". $row["id"]."'>";
         echo "<img src='" . $row["image"] . "' alt='Product Image'>";
         echo "<h2>" . $row["name"] . "</h2>";
         echo "<p>Price: $" . $row["price"] . "</p>";

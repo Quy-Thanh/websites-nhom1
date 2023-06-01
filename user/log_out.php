@@ -9,6 +9,7 @@ session_unset();
 session_destroy();
 
 // Chuyển hướng người dùng đến trang đăng nhập sau khi đăng xuất thành công
-header("Location: ../index.php");
+$base_url = 'http://localhost/websites-nhom1/';
+header("Location: ".$base_url."index.php");
 exit();
 ?>
