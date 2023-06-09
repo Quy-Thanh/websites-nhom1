@@ -124,17 +124,10 @@ if (isset($_GET['data'])) {
     echo "Không tìm thấy dữ liệu JSON.";
 }
 ?>
-<form action="../checkout/index.php">
+<form action="./index.php?id=$id">
 
 	<div>
 		<h1><?php echo $name; ?></h1>
-		<div>
-			<select>
-				<option>red</option>
-				<option>green</option>
-				<option>red</option>
-			</select>
-		</div>
 		<div class="product-descriotion">
 			<img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1664472289661">
 			<h2>DISPLAY <?php echo $display; ?></h2>
@@ -144,7 +137,7 @@ if (isset($_GET['data'])) {
 			<h2>GRAPHIC CARD <?php echo $graphic_card; ?></h2>
 			<h2>Price:  <?php echo $price; ?></h2>
 			<button><a href='../checkout/index.php?id=<?php echo $id; ?>'>Buy now</a></button>
-			<button href="../checkout/index.php">Add to card</button>
+			<button><a href="../../controllers/add_to_cart.php?id=<?php echo $id; ?>">add to cart</a></button>
 		</div>
 
 
@@ -157,9 +150,3 @@ if (isset($_GET['data'])) {
 </form>
 </body>
 </html>
-
-
-
-
-
-

@@ -19,9 +19,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check query result
         if ($stmt->rowCount() > 0) {
             // Login successful
-            // Redirect the user to the home page
+            // Get the account information
+            $account = $stmt->fetch(PDO::FETCH_ASSOC);
+            $user_id = $account['user_id'];
+
+            // Store the user ID in the session
             session_start();
+            $_SESSION["user_id"] = $user_id;
             $_SESSION["user_name"] = $user_name;
+
+            // Redirect the user to the home page
             header("Location: ../user/dashboard.php");
             exit();
         } else {
