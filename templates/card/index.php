@@ -92,37 +92,48 @@ $userName = $_SESSION['user_name'];
                         <input type="number" name="quantity[<?php echo $productId; ?>]" value="<?php echo $productQuantity; ?>" min="0" step="1">
                         <input type="submit" class="increase" name="increaseButton[]" value="▲">
                         <input type="submit" class="decrease" name="decreaseButton[]" value="▼">  
+                        <input type="submit" class="delete" name="delete[<?php echo $productId; ?>]" value="Delete">
                     </div>
                 </div>
                 <hr />
                 <?php
             }
         } else {
-            echo "Không có sản phẩm trong giỏ hàng!";
+            echo "<h1>Bạn chưa có sản phẩm nào trong giỏ hàng!</h1>";
+            echo "<script>alert('Hãy thêm sản phẩm vào giỏ hàng để theo dõi!');</script>";
         }
         mysqli_close($kn);
         ?>
         <div>
-            <input type='submit' value='Xác nhận thông tin và thanh toán' name='submit'>
-
             <?php
-            if (isset($_POST['submit'])) {
                 if (count($selectedIds) > 0) {
-                    foreach ($_POST['quantity'] as $productId => $productQuantity) {
-                        // Perform actions for each selected product ID and quantity
-                        $kn = mysqli_connect($servername, $username_database, $password_database, $dbname_database);
-                        $query = "UPDATE cart SET quantity = '$productQuantity' WHERE id = '$productId'";
-                        $result = mysqli_query($kn, $query);
-                        mysqli_close($kn);
+                    echo "<input type='submit' value='Xác nhận thông tin và thanh toán' name='submit'>";
+                    if (isset($_POST['submit'])) {
+                            foreach ($_POST['quantity'] as $productId => $productQuantity) {
+                                // Perform actions for each selected product ID and quantity
+                                $kn = mysqli_connect($servername, $username_database, $password_database, $dbname_database);
+                                $query = "UPDATE cart SET quantity = '$productQuantity' WHERE id = '$productId'";
+                                $result = mysqli_query($kn, $query);
+                                mysqli_close($kn);
+                            }
+                            echo '<script>window.location.href = "../checkout/index.php";</script>';
+                            exit(); // Đảm bảo dừng thực thi mã PHP sau khi chuyển hướng
                     }
-                    echo '<script>window.location.href = "../checkout/index.php";</script>';
-                    exit(); // Đảm bảo dừng thực thi mã PHP sau khi chuyển hướng
-                } else {
-                    echo "<script>alert('Hãy thêm sản phẩm vào giỏ hàng để theo dõi!');</script>";
                 }
-            }
+                if (isset($_POST['delete'])) {
+                    $kn = mysqli_connect($servername, $username_database, $password_database, $dbname_database);
+
+                    foreach ($_POST['delete'] as $productId => $value) {
+                        // Perform actions for each selected product ID
+                        $query = "DELETE FROM cart WHERE id = '$productId' AND customer_name = '$userName'";
+                        $result = mysqli_query($kn, $query);
+                    }
+
+                    mysqli_close($kn);
+                    echo '<script>window.location.href = "./index.php";</script>';
+                    exit();
+                }
             ?>
-            <button><a href='../checkout/index.php'>Detail</a></button>
         </div>
     </form>
     <script>

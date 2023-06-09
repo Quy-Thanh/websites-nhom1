@@ -94,7 +94,7 @@ if (!isset($_SESSION["user_name"])) {
     echo '<li><a href="' . $base_url . 'user/dashboard.php">Laptop</a></li>';
     echo '<li><a href="' . $base_url . 'user/dashboard.php">Items</a></li>';
     echo '<li><a href="' . $base_url . 'user/dashboard.php"><span class="material-symbols-outlined">search</span></a></li>';
-    echo '<li><a href="' . $base_url . 'templates/order/index.php">Order</a></li>';
+    echo '<li><a href="' . $base_url . 'templates/order/index.php">My order</a></li>';
     echo '<li><a href="' . $base_url . 'templates/support/index.php">Support</a></li>';
     echo '<li><a href="' . $base_url . 'templates/favourite/index.php">Favourite</a></li>';
     echo '<li><a href="' . $base_url . 'templates/card/index.php"><span class="material-symbols-outlined">shopping_cart</span></a></li>';
