@@ -1,0 +1,11 @@
+Name,Price,Description,Image,CPU,RAM,Storage,Graphic Card,Display
+Product Test 1,100,This is a test product,image1.jpg,Intel Core i5,8GB,256GB SSD,NVIDIA GeForce GTX 1650,15.6-inch Full HD
+Product Test 2,200,Another test product,image2.jpg,Intel Core i7,16GB,512GB SSD,NVIDIA GeForce RTX 3060,17-inch QHD
+Product Test 3,150,Test product number 3,image3.jpg,AMD Ryzen 5,12GB,1TB HDD,AMD Radeon RX 5500 XT,14-inch HD
+Product Test 4,120,Test product number 4,image4.jpg,AMD Ryzen 7,16GB,512GB SSD,NVIDIA GeForce GTX 1660,15.6-inch Full HD
+Product Test 5,180,Test product number 5,image5.jpg,Intel Core i5,8GB,1TB HDD,NVIDIA GeForce MX350,15.6-inch HD
+Product Test 6,90,Test product number 6,image6.jpg,Intel Core i3,4GB,256GB SSD,Intel UHD Graphics 620,14-inch HD
+Product Test 7,220,Test product number 7,image7.jpg,Intel Core i7,16GB,1TB SSD,NVIDIA GeForce RTX 3080,17-inch 4K UHD
+Product Test 8,130,Test product number 8,image8.jpg,AMD Ryzen 5,8GB,512GB SSD,AMD Radeon RX 5600M,15.6-inch Full HD
+Product Test 9,160,Test product number 9,image9.jpg,Intel Core i5,12GB,512GB SSD,NVIDIA GeForce GTX 1660 Ti,15.6-inch Full HD
+Product Test 10,140,Test product number 10,image10.jpg,Intel Core i7,16GB,1TB HDD,NVIDIA GeForce RTX 3070,17-inch Full HD

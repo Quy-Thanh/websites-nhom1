@@ -1,0 +1,190 @@
+{
+    "info": {
+        "_postman_id": "",
+        "name": "CSV to Newman Collection",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Product Test 1",
+            "request": {
+                "url": "http://localhost/websites-nhom1/api/postProduct.php",
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Product Test 1\", \"price\": \"100\", \"description\": \"This is a test product\", \"image\": \"image1.jpg\", \"cpu\": \"Intel Core i5\", \"ram\": \"8GB\", \"storage\": \"256GB SSD\", \"graphic_card\": \"NVIDIA GeForce GTX 1650\", \"display\": \"15.6-inch Full HD\"}"
+                },
+                "description": "Insert a product"
+            }
+        },
+        {
+            "name": "Product Test 2",
+            "request": {
+                "url": "http://localhost/websites-nhom1/api/postProduct.php",
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Product Test 2\", \"price\": \"200\", \"description\": \"Another test product\", \"image\": \"image2.jpg\", \"cpu\": \"Intel Core i7\", \"ram\": \"16GB\", \"storage\": \"512GB SSD\", \"graphic_card\": \"NVIDIA GeForce RTX 3060\", \"display\": \"17-inch QHD\"}"
+                },
+                "description": "Insert a product"
+            }
+        },
+        {
+            "name": "Product Test 3",
+            "request": {
+                "url": "http://localhost/websites-nhom1/api/postProduct.php",
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Product Test 3\", \"price\": \"150\", \"description\": \"Test product number 3\", \"image\": \"image3.jpg\", \"cpu\": \"AMD Ryzen 5\", \"ram\": \"12GB\", \"storage\": \"1TB HDD\", \"graphic_card\": \"AMD Radeon RX 5500 XT\", \"display\": \"14-inch HD\"}"
+                },
+                "description": "Insert a product"
+            }
+        },
+        {
+            "name": "Product Test 4",
+            "request": {
+                "url": "http://localhost/websites-nhom1/api/postProduct.php",
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Product Test 4\", \"price\": \"120\", \"description\": \"Test product number 4\", \"image\": \"image4.jpg\", \"cpu\": \"AMD Ryzen 7\", \"ram\": \"16GB\", \"storage\": \"512GB SSD\", \"graphic_card\": \"NVIDIA GeForce GTX 1660\", \"display\": \"15.6-inch Full HD\"}"
+                },
+                "description": "Insert a product"
+            }
+        },
+        {
+            "name": "Product Test 5",
+            "request": {
+                "url": "http://localhost/websites-nhom1/api/postProduct.php",
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Product Test 5\", \"price\": \"180\", \"description\": \"Test product number 5\", \"image\": \"image5.jpg\", \"cpu\": \"Intel Core i5\", \"ram\": \"8GB\", \"storage\": \"1TB HDD\", \"graphic_card\": \"NVIDIA GeForce MX350\", \"display\": \"15.6-inch HD\"}"
+                },
+                "description": "Insert a product"
+            }
+        },
+        {
+            "name": "Product Test 6",
+            "request": {
+                "url": "http://localhost/websites-nhom1/api/postProduct.php",
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Product Test 6\", \"price\": \"90\", \"description\": \"Test product number 6\", \"image\": \"image6.jpg\", \"cpu\": \"Intel Core i3\", \"ram\": \"4GB\", \"storage\": \"256GB SSD\", \"graphic_card\": \"Intel UHD Graphics 620\", \"display\": \"14-inch HD\"}"
+                },
+                "description": "Insert a product"
+            }
+        },
+        {
+            "name": "Product Test 7",
+            "request": {
+                "url": "http://localhost/websites-nhom1/api/postProduct.php",
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Product Test 7\", \"price\": \"220\", \"description\": \"Test product number 7\", \"image\": \"image7.jpg\", \"cpu\": \"Intel Core i7\", \"ram\": \"16GB\", \"storage\": \"1TB SSD\", \"graphic_card\": \"NVIDIA GeForce RTX 3080\", \"display\": \"17-inch 4K UHD\"}"
+                },
+                "description": "Insert a product"
+            }
+        },
+        {
+            "name": "Product Test 8",
+            "request": {
+                "url": "http://localhost/websites-nhom1/api/postProduct.php",
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Product Test 8\", \"price\": \"130\", \"description\": \"Test product number 8\", \"image\": \"image8.jpg\", \"cpu\": \"AMD Ryzen 5\", \"ram\": \"8GB\", \"storage\": \"512GB SSD\", \"graphic_card\": \"AMD Radeon RX 5600M\", \"display\": \"15.6-inch Full HD\"}"
+                },
+                "description": "Insert a product"
+            }
+        },
+        {
+            "name": "Product Test 9",
+            "request": {
+                "url": "http://localhost/websites-nhom1/api/postProduct.php",
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Product Test 9\", \"price\": \"160\", \"description\": \"Test product number 9\", \"image\": \"image9.jpg\", \"cpu\": \"Intel Core i5\", \"ram\": \"12GB\", \"storage\": \"512GB SSD\", \"graphic_card\": \"NVIDIA GeForce GTX 1660 Ti\", \"display\": \"15.6-inch Full HD\"}"
+                },
+                "description": "Insert a product"
+            }
+        },
+        {
+            "name": "Product Test 10",
+            "request": {
+                "url": "http://localhost/websites-nhom1/api/postProduct.php",
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Product Test 10\", \"price\": \"140\", \"description\": \"Test product number 10\", \"image\": \"image10.jpg\", \"cpu\": \"Intel Core i7\", \"ram\": \"16GB\", \"storage\": \"1TB HDD\", \"graphic_card\": \"NVIDIA GeForce RTX 3070\", \"display\": \"17-inch Full HD\"}"
+                },
+                "description": "Insert a product"
+            }
+        }
+    ]
+}
