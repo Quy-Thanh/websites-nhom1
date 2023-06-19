@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
 $username_database = "root";
-$password_database = "MyDream@01022003";
-$dbname_database = "websites_nhom1";
+$password_database = "12345678";
+$dbname_database = "websites-nhom1";
 ?>

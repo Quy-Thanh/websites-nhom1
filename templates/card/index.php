@@ -63,17 +63,17 @@ $userName = $_SESSION['user_name'];
         }
         
 
-        $query = "SELECT products.name, products.image, products.price, cart.id, cart.quantity, cart.total FROM products JOIN cart ON products.id = cart.product_id WHERE cart.customer_name = '$userName'";
+        $query = "SELECT product.NameProduct, product.Image, product.Price, cart.id, cart.quantity, cart.total FROM product JOIN cart ON product.IDProduct = cart.product_id WHERE cart.customer_name = '$userName'";
         $result = mysqli_query($kn, $query);
 
         if (mysqli_num_rows($result) > 0) {
-            $selectedIds = array(); // Initialize an array to store the selected IDs
+            $selectedIds = array(); // Khởi tạo một mảng để lưu trữ các ID đã chọn
             while ($row = mysqli_fetch_assoc($result)) {
                 $productId = $row['id'];
-                $selectedIds[] = $productId; // Add each product ID to the selected IDs array
-                $productImage = $row['image'];
-                $productName = $row['name'];
-                $productPrice = $row['price'];
+                $selectedIds[] = $productId; // Thêm mỗi ID sản phẩm vào mảng các ID đã chọn
+                $productImage = $row['Image'];
+                $productName = $row['Name'];
+                $productPrice = $row['Price'];
                 $productQuantity = $row['quantity'];
                 ?>
                 <div class="product">
@@ -110,7 +110,7 @@ $userName = $_SESSION['user_name'];
                     echo "<input type='submit' value='Xác nhận thông tin và thanh toán' name='submit'>";
                     if (isset($_POST['submit'])) {
                             foreach ($_POST['quantity'] as $productId => $productQuantity) {
-                                // Perform actions for each selected product ID and quantity
+                                // Thực hiện các hành động cho mỗi ID sản phẩm và số lượng tương ứng
                                 $kn = mysqli_connect($servername, $username_database, $password_database, $dbname_database);
                                 $query = "UPDATE cart SET quantity = '$productQuantity' WHERE id = '$productId'";
                                 $result = mysqli_query($kn, $query);
@@ -124,7 +124,7 @@ $userName = $_SESSION['user_name'];
                     $kn = mysqli_connect($servername, $username_database, $password_database, $dbname_database);
 
                     foreach ($_POST['delete'] as $productId => $value) {
-                        // Perform actions for each selected product ID
+                        // Thực hiện các hành động cho mỗi ID sản phẩm đã chọn
                         $query = "DELETE FROM cart WHERE id = '$productId' AND customer_name = '$userName'";
                         $result = mysqli_query($kn, $query);
                     }
@@ -137,7 +137,7 @@ $userName = $_SESSION['user_name'];
         </div>
     </form>
     <script>
-        // JavaScript code to increase quantity
+        // Mã JavaScript để tăng số lượng
         const increaseButtons = document.querySelectorAll('.increase');
         increaseButtons.forEach(button => {
             button.addEventListener('click', function(e) {
@@ -147,7 +147,7 @@ $userName = $_SESSION['user_name'];
             });
         });
 
-        // JavaScript code to decrease quantity
+        // Mã JavaScript để giảm số lượng
         const decreaseButtons = document.querySelectorAll('.decrease');
         decreaseButtons.forEach(button => {
             button.addEventListener('click', function(e) {

@@ -1,5 +1,5 @@
 <?php
-    $myconnect = new mysqli("localhost", "root", "","shoplaptopn1");
+    $myconnect = new mysqli("localhost", "root", "12345678","websites-nhom1");
 
     if($myconnect -> connect_errno){
 

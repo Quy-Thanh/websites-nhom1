@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Prepare and execute the query to check login information
-        $stmt = $conn->prepare("SELECT * FROM UserAccount WHERE user_name = :user_name AND password = :password");
+        $stmt = $conn->prepare("SELECT * FROM taikhoan WHERE User = :user_name AND Password = :password");
         $stmt->bindParam(':user_name', $user_name);
         $stmt->bindParam(':password', $password);
         $stmt->execute();

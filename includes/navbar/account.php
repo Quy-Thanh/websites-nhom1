@@ -50,7 +50,7 @@ echo '<li><a href="#">voucher</a></li>';
 echo '<li><a href="#">upgrade</a></li>';
 echo '<li><a href="#">help</a></li>';
 echo '<li><a href="#">setting</a></li>';
-echo '<li><a href="../user/log_out.php">logout</a></li>';
+echo '<li><a href="./user/log_out.php">logout</a></li>';
 echo '<li></li>';
 echo '</ul>';
 ?>

@@ -15,9 +15,7 @@ if (isset($_GET['id'])) {
 
     try {
         $sql = "SELECT *
-                FROM products p
-                JOIN product_detail pd ON p.id = pd.product_id
-                WHERE p.id = :productId";
+                FROM product WHERE IDProduct = :productId";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':productId', $productId);
         $stmt->execute();
@@ -26,15 +24,15 @@ if (isset($_GET['id'])) {
         // Kiểm tra và xử lý kết quả truy vấn
         if ($product) {
             $productInfo = array(
-                'id' => $product['id'],
-                'name' => $product['name'],
-                'description' => $product['description'],
-                'price' => $product['price'],
-                'cpu' => $product['cpu'],
-                'ram' => $product['ram'],
-                'storage' => $product['storage'],
-                'graphic_card' => $product['graphic_card'],
-                'display' => $product['display']
+                'id' => $product['IDProduct'],
+                'name' => $product['NameProduct'],
+                'description' => $product['Description'],
+                'price' => $product['Price'],
+                'cpu' => $product['CPU'],
+                'ram' => $product['RAM'],
+                'storage' => $product['Disk'],
+                'graphic_card' => $product['VGA'],
+                'display' => $product['Screen']
             );
 
             // Chuyển đổi mảng thông tin sản phẩm thành dữ liệu JSON

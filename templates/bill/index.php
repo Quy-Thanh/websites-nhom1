@@ -11,10 +11,10 @@ if (!$connection) {
 }
 
 // Chuẩn bị truy vấn
-$query = "SELECT c.id, c.quantity, c.price, p.name, c.product_id
-          FROM cart c
-          INNER JOIN products p ON c.product_id = p.id
-          ORDER BY p.name ASC";
+$query = "SELECT c.id, c.quantity, c.price, p.NameProduct, c.product_id
+FROM cart c
+INNER JOIN product p ON c.product_id = p.IDProduct
+ORDER BY p.NameProduct ASC";
 
 $result = mysqli_query($connection, $query);
 ?>

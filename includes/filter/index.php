@@ -1,21 +1,23 @@
 <style type="text/css">
 .filter-container {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  display: inline-flex;
+  flex-direction: row;
 }
 
 .filter-group {
   margin-bottom: 10px;
   display: inline-block;
+  padding: 16px;
+}
+#filter-btn {
+  height: 44px;
 }
 
-.product-list {
-  /* Styles for product list */
-}
 
 </style>
 
 <div class="filter-container">
-  <h2>Filter</h2>
   <div class="filter-group">
     <label for="category">Category:</label>
     <select id="category">
