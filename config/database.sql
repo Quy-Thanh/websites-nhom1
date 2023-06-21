@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th6 19, 2023 lúc 06:15 AM
+-- Thời gian đã tạo: Th6 21, 2023 lúc 04:48 AM
 -- Phiên bản máy phục vụ: 8.0.17
 -- Phiên bản PHP: 7.3.10
 
@@ -63,8 +63,9 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `customer_name`, `product_id`, `quantity`, `price`, `created_at`, `additional_info`) VALUES
-(1, 'Toquythanh2k3', 3, 6, '1500000.00', '2023-06-19 13:06:20', NULL),
-(3, 'Toquythanh2k3', 4, 3, '1500000.00', '2023-06-19 13:06:20', NULL);
+(3, 'Toquythanh2k3', 4, 3, '1500000.00', '2023-06-19 13:06:20', NULL),
+(4, 'Toquythanh2k3', 131, 5, '1500000.00', '2023-06-19 16:47:18', NULL),
+(5, 'Toquythanh2k3', 2, 4, '1500000.00', '2023-06-19 18:35:50', NULL);
 
 -- --------------------------------------------------------
 
@@ -177,7 +178,6 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`IDProduct`, `NameProduct`, `Price`, `SoLuong`, `Image`, `CPU`, `RAM`, `Disk`, `VGA`, `Screen`, `IDDanhMuc`, `IDBrand`, `IDKhuyenMai`, `Description`) VALUES
-(2, 'Dell 5570', '1500000', 12, 'https://laptop88.vn/media/product/250_8017_7896_7716_7015_6904_dell_inspiron_15_3511_70270650_1.jpg', 'I5 8250U', '8GB', '256GB', '160TI', '15 inch', 20, 16, 1, 'Khong '),
 (3, 'Dell 5570', '1500000', 12, 'https://laptop88.vn/media/product/250_8017_7896_7716_7015_6904_dell_inspiron_15_3511_70270650_1.jpg', 'I5 8250U', '8GB', '256GB', '160TI', '15 inch', 20, 16, 1, 'Khong '),
 (130, 'Dell 5570', '1500000', 12, 'https://laptop88.vn/media/product/250_7575_dell_latitude_5410_jakarta_1.jpg', 'I5 8250U', '8GB', '256GB', '160TI', '15 inch', 20, 16, 1, 'Khong'),
 (131, 'Dell 5570', '1500000', 12, 'https://laptop88.vn/media/product/250_7575_dell_latitude_5410_jakarta_1.jpg', 'I5 8250U', '8GB', '256GB', '160TI', '15 inch', 20, 16, 1, 'Khong'),
@@ -336,7 +336,7 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT cho bảng `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmuc`
